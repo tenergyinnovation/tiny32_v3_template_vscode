@@ -44,3 +44,7 @@ libraries scanning project source files.
 
 More information about PlatformIO Library Dependency Finder
 - https://docs.platformio.org/page/librarymanager/ldf.html
+
+*********************************************************************
+Please clone to lib
+1. git clone https://github.com/tenergyinnovation/tiny32_v3.git
