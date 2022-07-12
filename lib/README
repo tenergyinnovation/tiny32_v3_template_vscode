@@ -48,3 +48,7 @@ More information about PlatformIO Library Dependency Finder
 *********************************************************************
 Please clone to lib
 1. git clone https://github.com/tenergyinnovation/tiny32_v3.git
+
+2. git clone https://github.com/adafruit/Adafruit_ADS1X15.git
+
+3. git clone https://github.com/adafruit/Adafruit_BusIO.git
