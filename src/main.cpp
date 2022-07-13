@@ -1,5 +1,5 @@
 /***********************************************************************
- * Project      :     tiny32_v3_temploate
+ * Project      :     tiny32_v3_template
  * Description  :     Template coding for tiny32_v3 on vscode with platformIO
  * Hardware     :     tiny32_v3         
  * Author       :     Tenergy Innovation Co., Ltd.
