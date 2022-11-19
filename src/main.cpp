@@ -12,6 +12,7 @@
  ***********************************************************************/
 #include <Arduino.h>
 #include <tiny32_v3.h>
+#include <esp_task_wdt.h>
 
 /**************************************/
 /*          Firmware Version          */
@@ -50,6 +51,8 @@ tiny32_v3 mcu;
 /**************************************/
 /*       Constand define value        */
 /**************************************/
+// 10 seconds WDT
+#define WDT_TIMEOUT 10
 
 /**************************************/
 /*       eeprom address define        */
@@ -72,9 +75,12 @@ tiny32_v3 mcu;
  ***********************************************************************/
 void setup()
 {
- Serial.begin(115200);
- header_print();
+    Serial.begin(115200);
+    header_print();
 
+    Serial.println("Configuring WDT...");
+    esp_task_wdt_init(WDT_TIMEOUT, true); // enable panic so ESP32 restarts
+    esp_task_wdt_add(NULL);               // add current thread to WDT watch
 }
 
  /***********************************************************************
@@ -85,6 +91,6 @@ void setup()
  ***********************************************************************/
 void loop()
 {
-
-
+    esp_task_wdt_reset();
+    vTaskDelay(100);
 }
